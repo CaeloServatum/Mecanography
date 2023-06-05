@@ -1,0 +1,153 @@
+header {
+  background-color: #1A6F70;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+header div.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px 0px auto auto;
+}
+header div.title p {
+  font-size: 60px;
+  color: white;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+  flex-direction: row;
+  margin: 15px;
+  cursor: pointer;
+}
+header nav .nav_Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 15%;
+  height: 40px;
+  margin: 0px 15px;
+  background-color: #80F0F2;
+  border-radius: 15px;
+  color: #1A6F70;
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+main div.text_square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  background: white;
+  margin: 10px auto 5px auto;
+  border: #1A6F70 solid 5px;
+  border-radius: 15px;
+  padding: 5px;
+}
+main div.text_square p {
+  font-size: 40px;
+  font-weight: 700;
+}
+main div.main_Input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main div.main_Input input {
+  width: 25%;
+  height: 80px;
+  margin: auto;
+  border: #1A6F70 solid 2px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 35px;
+  outline: none;
+}
+main div.settings_Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+main div.settings_Buttons div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 5%;
+  height: 40px;
+  border-radius: 15px;
+  border: #1A6F70 solid 3px;
+  margin: 0px 5px;
+  background-color: #37ECEF;
+  color: #1A6F70;
+  cursor: pointer;
+}
+main div.settings_Buttons div.timer_Buttton {
+  font-size: 25px;
+  font-weight: 700;
+}
+main div.settings_Buttons div.reset_Buttton {
+  font-size: 30px;
+}
+main div.settings_Buttons div.eye_Button {
+  font-size: 30px;
+}
+main div.settings_Buttons div.eye_Button i.fa-eye-slash {
+  display: none;
+}
+main div.score_Square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main div.score_Square div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 4%;
+  height: 40px;
+  border-radius: 15px;
+  border: #1A6F70 solid 2px;
+  margin: 0px 5px;
+  background-color: #37ECEF;
+  color: #1A6F70;
+}
+main div.score_Square div.correct_Square p {
+  color: #0FC542;
+  font-size: 25px;
+  font-weight: 700;
+}
+main div.score_Square div.wrong_Square p {
+  color: #FF0000;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  background-color: #80F0F2;
+}/*# sourceMappingURL=style.css.map */

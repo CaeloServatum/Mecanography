@@ -1,0 +1,15 @@
+// Modules
+@use 'header';
+@use 'variables';
+@use 'mixin';
+@use 'main';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Comfortaa', cursive;
+}
+body{
+    background-color: variables.$secondary-color;
+}

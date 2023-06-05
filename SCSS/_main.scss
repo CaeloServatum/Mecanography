@@ -1,0 +1,89 @@
+@use 'variables';
+@use 'mixin';
+
+main{
+    width: 100%;
+    position: relative;
+    div.text_square{
+        @include mixin.d_flex();
+        width: 90%;
+        background: white;
+        margin: 10px auto 5px auto;
+        border: variables.$primary-color solid 5px;
+        border-radius: 15px;
+        padding: 5px;
+        p{
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+    div.main_Input{
+        @include mixin.d_flex();
+        input{
+            width: 25%;
+            height: 80px;
+            margin: auto;
+            border: variables.$primary-color solid 2px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 35px;
+            outline: none;
+        }
+    }
+    div.settings_Buttons{
+        @include mixin.d_flex();
+        margin: 5px;
+        div{
+            @include mixin.d_flex();
+            width: 5%;
+            height: 40px;
+            border-radius: 15px;
+            border: variables.$primary-color solid 3px;
+            margin: 0px 5px;
+            background-color: variables.$tertiary-color;
+            color: variables.$primary-color;
+            cursor: pointer;
+        }
+        div.timer_Buttton{
+            font-size: 25px;
+            font-weight: 700;
+        }
+        div.reset_Buttton{
+            font-size: 30px;
+        }
+        div.eye_Button{
+            font-size: 30px;
+            i.fa-eye-slash{
+                display: none;
+            }
+        }
+    }
+    div.score_Square{
+        @include mixin.d_flex();
+        div{
+            @include mixin.d_flex();
+            width: 4%;
+            height: 40px;
+            border-radius: 15px;
+            border: variables.$primary-color solid 2px;
+            margin: 0px 5px;
+            background-color: variables.$tertiary-color;
+            color: variables.$primary-color;
+            
+        }
+        div.correct_Square{
+            p{
+                color: #0FC542;
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+        div.wrong_Square{
+            p{
+                color: #FF0000;
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+    }
+}

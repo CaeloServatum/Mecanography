@@ -1,0 +1,33 @@
+@use 'variables';
+@use 'mixin';
+
+header{
+    background-color: variables.$primary-color;
+    width: 100%;
+    @include mixin.d_flex();
+    div.title{
+        @include mixin.d_flex();
+        width: 100%;
+        margin: 10px 0px auto auto;
+        p{
+            font-size: 60px;
+            color: white;
+        }
+    }
+    nav{
+        @include mixin.d_flex();
+        width: 60%;
+        flex-direction: row;
+        margin: 15px;
+        cursor: pointer;
+        .nav_Button{
+            @include mixin.d_flex();
+            width: 15%;
+            height: 40px;
+            margin: 0px 15px;
+            background-color: variables.$secondary-color;
+            border-radius: 15px;
+            color: variables.$primary-color;
+        }
+    }
+}
