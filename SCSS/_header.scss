@@ -1,6 +1,81 @@
 @use 'variables';
 @use 'mixin';
 
+// Keyframes
+@keyframes zoomIn {
+     from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fillFromSides {
+    from {
+        background-color: variables.$primary-color;
+        color: white;
+        border: 3px variables.$secondary-color solid;
+    }
+    to {
+      background-color: #27D9AA;
+    }
+  }
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes rainbow {
+    0% {
+      color: red;
+    }
+    14% {
+      color: orange;
+    }
+    28% {
+      color: yellow;
+    }
+    42% {
+      color: green;
+    }
+    57% {
+      color: blue;
+    }
+    71% {
+      color: indigo;
+    }
+    85% {
+      color: violet;
+    }
+    100% {
+      color: red;
+    }
+  }
+
+
 header{
     background-color: variables.$primary-color;
     width: 100%;
@@ -9,9 +84,14 @@ header{
         @include mixin.d_flex();
         width: 100%;
         margin: 10px 0px auto auto;
+        animation: zoomIn variables.$time-animation ease-in-out;
         p{
-            font-size: 60px;
+            font-size: 70px;
             color: white;
+            transition: color 0.3s ease-out;
+            &:hover {
+                animation: rainbow 2s linear infinite;
+              }
         }
     }
     nav{
@@ -19,15 +99,23 @@ header{
         width: 60%;
         flex-direction: row;
         margin: 15px;
-        cursor: pointer;
-        .nav_Button{
+        .nav_button{
             @include mixin.d_flex();
             width: 15%;
             height: 40px;
+            cursor: pointer;
             margin: 0px 15px;
             background-color: variables.$secondary-color;
             border-radius: 15px;
             color: variables.$primary-color;
+            border: 3px variables.$quartery-color solid;
+            animation: zoomIn (variables.$time-animation*2) ease-in-out;
+            transition: background-color 0.3s ease-out;
+            &:hover{
+                background-color: variables.$primary-color;
+                color: white;
+                border: 3px variables.$secondary-color solid;
+            }
         }
     }
 }

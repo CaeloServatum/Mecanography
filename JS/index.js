@@ -1,59 +1,101 @@
-let dinoHola = "owo";
+window.addEventListener('DOMContentLoaded',function(){
 
-console.log(dinoHola);
+    const eye = document.querySelector('.fa-eye')
+    const eyeSlash = document.querySelector('.fa-eye-slash')
+    const timer = document.querySelector('.timer_Buttton p')
 
-function holiwi(nombresito){
-    console.log("Oa, " + nombresito + " ♥");
-}
+    console.log(eye);
+    console.log(eyeSlash);
+    console.log(timer);
 
-holiwi("Juan alverto jimenes perez san pedro")
+    eye.addEventListener('click',function(){ 
+        if (eye.style.display == flex) {
+            esconder("hidden")
+        } else {
+            esconder("none")
+        }
+    eyeSlash.addEventListener('click',function(){
+        eyeSlash.style.display = flex;
+    })
+    timer.addEventListener('click',function(){
+        timer.style.display = none;
+    })
 
-for(dinoHola = 0; dinoHola < 10; dinoHola++){
-    console.log("Tu owosidad es de " + dinoHola)
-}
+    function esconder(estado){
+        eye.style.display = estado;
+    }
 
-console.log(dinoHola)
+    // function ponerColores (color,letra,aumentar) {
 
-while(dinoHola > 0){
-    console.log("Tu owosidad disminuyo nub, ahora es de " + dinoHola);
-    dinoHola--;
-}
+        //     text.style.backgroundColor = color;
+        
+        //     text.style.color = letra;
+        
+        //     // let pixeles = getComputedStyle(text.children[0]).fontSize;
+        
+        //     // pixeles = parseInt(pixeles.replace('px',''))
+        
+        //     // console.log(pixeles)
+        
+        //     let pixeles = getComputedStyle(text.children[0]).fontSize;
+        
+        //     pixeles = pixeles.split('px')
+        
+        //     pixeles = parseInt(pixeles[0])
+        
+        //     if(aumentar) {
+        //       text.children[0].style.fontSize = pixeles + 1 + "px"
+        //     } else {
+        //       text.children[0].style.fontSize = pixeles - 1 + "px"
+        //     }
+})
 
-let lolDivision = "gold";
-let champLol;
+// const rojo = document.querySelector('#home')
+// rojo.classList.add('clasesita')
 
-switch (lolDivision) {
-  case "bronze":
-    champLol = "Teemo";
-    break;
-  case "silver":
-    champLol = "Darius";
-    break;
-  case "gold":
-    champLol = "Azir";
-    break;
-  case "platinum":
-    champLol = "Aphelios";
-    break;
-  case "diamond":
-    champLol = "Bardo";
-    break;
-  case "challenger":
-    champLol = "Akshan";
-    break;
-  case "fakerxd":
-    champLol = "Le Blanc";
-    break;
-  default:
-    champLol = "Día inválido";
-}
 
-console.log("Tu champ es " + champLol);
+// setTimeout(function() {
+//   console.log("este timeout se ejecuta despues de 5 segundos")
+//   rojo.classList.remove('nav_button')
+// },5000)
+//   const azul = document.querySelector('#azul')
+//   const text = document.querySelector('.text_square')
 
-console.log(dinoHola)
+//   rojo.addEventListener('click',function(){
+//     ponerColores("#000","green",true)
 
-if(dinoHola == 0){
-    console.log("JAJAJAJA tu owosidad es de 0, mero nub xd")
-} else{
-    console.log("Weno, tienes más owosidad que 0, no eres nub uwu")
-}
+//   })
+ 
+//   azul.addEventListener('click',function(){
+
+//     ponerColores("blue","red",false)
+
+//   })
+
+//   function ponerColores (color,letra,aumentar) {
+
+//     text.style.backgroundColor = color;
+
+//     text.style.color = letra;
+
+//     // let pixeles = getComputedStyle(text.children[0]).fontSize;
+
+//     // pixeles = parseInt(pixeles.replace('px',''))
+
+//     // console.log(pixeles)
+
+//     let pixeles = getComputedStyle(text.children[0]).fontSize;
+
+//     pixeles = pixeles.split('px')
+
+//     pixeles = parseInt(pixeles[0])
+
+//     if(aumentar) {
+//       text.children[0].style.fontSize = pixeles + 1 + "px"
+//     } else {
+//       text.children[0].style.fontSize = pixeles - 1 + "px"
+//     }
+
+
+
+})

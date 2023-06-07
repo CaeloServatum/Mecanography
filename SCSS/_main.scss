@@ -1,5 +1,18 @@
 @use 'variables';
 @use 'mixin';
+// Keyframes
+@keyframes zoomIn {
+    from {
+       transform: scale(0);
+       opacity: 0;
+   }
+   to {
+        transform: scale(1);
+       opacity: 1;
+   }
+}
+
+
 
 main{
     width: 100%;
@@ -12,9 +25,11 @@ main{
         border: variables.$primary-color solid 5px;
         border-radius: 15px;
         padding: 5px;
+        animation: zoomIn (variables.$time-animation*2) ease-in-out;
         p{
             font-size: 40px;
             font-weight: 700;
+            animation: zoomIn (variables.$time-animation*2.5) ease-in-out;
         }
     }
     div.main_Input{
@@ -28,6 +43,7 @@ main{
             text-align: center;
             font-size: 35px;
             outline: none;
+            animation: zoomIn (variables.$time-animation*2.9) ease-in-out;
         }
     }
     div.settings_Buttons{
@@ -43,16 +59,29 @@ main{
             background-color: variables.$tertiary-color;
             color: variables.$primary-color;
             cursor: pointer;
+            animation: zoomIn (variables.$time-animation*3.2) ease-in-out;
+            transition: background-color 0.5s ease-out;
+            &:hover{
+                background-color: variables.$primary-color;
+                color: white;
+                border: 3px variables.$tertiary-color solid;
+            }
         }
         div.timer_Buttton{
             font-size: 25px;
             font-weight: 700;
+            p{
+                display: flex;
+            }
         }
         div.reset_Buttton{
             font-size: 30px;
         }
         div.eye_Button{
             font-size: 30px;
+            i.fa-eye{
+                display: flex;
+            }
             i.fa-eye-slash{
                 display: none;
             }
@@ -69,7 +98,7 @@ main{
             margin: 0px 5px;
             background-color: variables.$tertiary-color;
             color: variables.$primary-color;
-            
+            animation: zoomIn (variables.$time-animation*3.5) ease-in-out;
         }
         div.correct_Square{
             p{

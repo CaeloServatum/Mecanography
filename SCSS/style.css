@@ -1,3 +1,75 @@
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fillFromSides {
+  from {
+    background-color: #1A6F70;
+    color: white;
+    border: 3px #80F0F2 solid;
+  }
+  to {
+    background-color: #27D9AA;
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
+}
 header {
   background-color: #1A6F70;
   width: 100%;
@@ -13,10 +85,15 @@ header div.title {
   flex-wrap: wrap;
   width: 100%;
   margin: 10px 0px auto auto;
+  animation: zoomIn 0.5s ease-in-out;
 }
 header div.title p {
-  font-size: 60px;
+  font-size: 70px;
   color: white;
+  transition: color 0.3s ease-out;
+}
+header div.title p:hover {
+  animation: rainbow 2s linear infinite;
 }
 header nav {
   display: flex;
@@ -26,21 +103,39 @@ header nav {
   width: 60%;
   flex-direction: row;
   margin: 15px;
-  cursor: pointer;
 }
-header nav .nav_Button {
+header nav .nav_button {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   width: 15%;
   height: 40px;
+  cursor: pointer;
   margin: 0px 15px;
   background-color: #80F0F2;
   border-radius: 15px;
   color: #1A6F70;
+  border: 3px #27D9AA solid;
+  animation: zoomIn 1s ease-in-out;
+  transition: background-color 0.3s ease-out;
+}
+header nav .nav_button:hover {
+  background-color: #1A6F70;
+  color: white;
+  border: 3px #80F0F2 solid;
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 main {
   width: 100%;
   position: relative;
@@ -56,10 +151,12 @@ main div.text_square {
   border: #1A6F70 solid 5px;
   border-radius: 15px;
   padding: 5px;
+  animation: zoomIn 1s ease-in-out;
 }
 main div.text_square p {
   font-size: 40px;
   font-weight: 700;
+  animation: zoomIn 1.25s ease-in-out;
 }
 main div.main_Input {
   display: flex;
@@ -76,6 +173,7 @@ main div.main_Input input {
   text-align: center;
   font-size: 35px;
   outline: none;
+  animation: zoomIn 1.45s ease-in-out;
 }
 main div.settings_Buttons {
   display: flex;
@@ -97,16 +195,29 @@ main div.settings_Buttons div {
   background-color: #37ECEF;
   color: #1A6F70;
   cursor: pointer;
+  animation: zoomIn 1.6s ease-in-out;
+  transition: background-color 0.5s ease-out;
+}
+main div.settings_Buttons div:hover {
+  background-color: #1A6F70;
+  color: white;
+  border: 3px #37ECEF solid;
 }
 main div.settings_Buttons div.timer_Buttton {
   font-size: 25px;
   font-weight: 700;
+}
+main div.settings_Buttons div.timer_Buttton p {
+  display: flex;
 }
 main div.settings_Buttons div.reset_Buttton {
   font-size: 30px;
 }
 main div.settings_Buttons div.eye_Button {
   font-size: 30px;
+}
+main div.settings_Buttons div.eye_Button i.fa-eye {
+  display: flex;
 }
 main div.settings_Buttons div.eye_Button i.fa-eye-slash {
   display: none;
@@ -129,6 +240,7 @@ main div.score_Square div {
   margin: 0px 5px;
   background-color: #37ECEF;
   color: #1A6F70;
+  animation: zoomIn 1.75s ease-in-out;
 }
 main div.score_Square div.correct_Square p {
   color: #0FC542;
