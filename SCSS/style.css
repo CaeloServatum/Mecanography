@@ -152,11 +152,46 @@ main div.text_square {
   border-radius: 15px;
   padding: 5px;
   animation: zoomIn 1s ease-in-out;
-}
-main div.text_square p {
+  min-height: 200px;
   font-size: 40px;
   font-weight: 700;
   animation: zoomIn 1.25s ease-in-out;
+}
+main div.text_square span {
+  margin: 5px 5px;
+  padding: 10px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+main div.text_square span.active {
+  background: gray;
+  border-radius: 5px;
+  color: white;
+}
+main div.text_square span.wrong {
+  background: red;
+  animation: wrong 0.1s 3 forwards;
+}
+main div.text_square span.correct {
+  background: green;
+  animation: correct 0.1s ease-in-out 2;
+}
+@keyframes wrong {
+  from {
+    left: 0;
+  }
+  to {
+    left: 5px;
+  }
+}
+@keyframes correct {
+  from {
+    top: 0;
+  }
+  to {
+    top: 5px;
+  }
 }
 main div.main_Input {
   display: flex;
@@ -165,7 +200,7 @@ main div.main_Input {
   flex-wrap: wrap;
 }
 main div.main_Input input {
-  width: 25%;
+  width: 45%;
   height: 80px;
   margin: auto;
   border: #1A6F70 solid 2px;
@@ -207,20 +242,17 @@ main div.settings_Buttons div.timer_Buttton {
   font-size: 25px;
   font-weight: 700;
 }
-main div.settings_Buttons div.timer_Buttton p {
-  display: flex;
-}
 main div.settings_Buttons div.reset_Buttton {
   font-size: 30px;
 }
 main div.settings_Buttons div.eye_Button {
   font-size: 30px;
-}
-main div.settings_Buttons div.eye_Button i.fa-eye {
-  display: flex;
-}
-main div.settings_Buttons div.eye_Button i.fa-eye-slash {
-  display: none;
+  /* i.fa-eye{
+      display: flex;
+  } */
+  /*  i.fa-eye-slash{
+       display: none;
+   } */
 }
 main div.score_Square {
   display: flex;
@@ -253,6 +285,35 @@ main div.score_Square div.wrong_Square p {
   font-weight: 700;
 }
 
+.d-none {
+  display: none !important;
+}
+
+.puntuacion {
+  font-size: 20px;
+  display: inline-block;
+  color: white;
+  font-weight: bolder;
+  padding: 20px 40px;
+  background-color: green;
+  border-radius: 15px;
+  box-shadow: 0 0 10px black;
+  animation: floating 1s ease-in-out infinite alternate;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+}
+
+@keyframes floating {
+  from {
+    top: 20px;
+  }
+  to {
+    top: 30px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
